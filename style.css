@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    color: #ff0000;
+    padding: 30px 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Impact', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9), 0 0 20px #ff0000;
+    text-transform: uppercase;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    border: 2px solid #ff0000;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.login-container input {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 2px solid #ff0000;
+    background-color: #222;
+    color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: #fff;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #ff4d4d;
+}
+
+section {
+    padding: 50px 20px;
+    background-color: #222;
+    margin-top: 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s ease;
+}
+
+section img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #000;
+    color: #ff0000;
+    padding: 20px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.8);
+}
+
+footer p {
+    font-size: 1em;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes de Terror</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function buscarFilme() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let filmes = document.querySelectorAll(".filmes article");
+            
+            filmes.forEach(filme => {
+                let titulo = filme.querySelector("h2").innerText.toLowerCase();
+                if (titulo.includes(input)) {
+                    filme.style.display = "block";
+                } else {
+                    filme.style.display = "none";
+                }
+            });
+        }
+
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "ZL" && password === "ZL") {
+                alert("Login bem-sucedido!");
+                document.getElementById("loginForm").style.display = "none"; // Esconde o formulário de login
+                document.getElementById("header").style.display = "block"; // Exibe o cabeçalho
+                document.getElementById("filmes").style.display = "block"; // Exibe a seção de filmes
+            } else {
+                alert("Credenciais inválidas!");
+            }
+        }
+    </script>
+    <style>
+        #loginForm {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #loginForm input {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #loginForm button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #loginForm button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para o cabeçalho e filmes */
+        #header {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #filmes {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .filmes article {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .filmes article img {
+            width: 200px;
+            height: auto;
+        }
+
+        .filmes article h2 {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" style="display:none;">
+        <h1>Filmes de Terror</h1>
+        <input type="text" id="searchBar" placeholder="Pesquisar..." onkeyup="buscarFilme()">
+    </header>
+
+    <!-- Formulário de login no canto superior direito -->
+    <section id="loginForm">
+        <h2>Login</h2>
+        <form onsubmit="event.preventDefault(); login();">
+            <input type="text" id="username" placeholder="Usuário" required><br>
+            <input type="password" id="password" placeholder="Senha" required><br>
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <!-- Filmes de Terror - Exibidos após o login -->
+    <section id="filmes" style="display:none;">
+        <section class="filmes">
+            <article>
+                <a href="exorcista.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/The_Exorcist_Logo.svg" alt="O Exorcista">
+                    <h2>O Exorcista (1973)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="iluminado.html">
+                    <img src="iluminado imagem.jpg" alt="O Iluminado">
+                    <h2>O Iluminado (1980)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="psicose.html">
+                    <img src="psicose imagem.jpg" alt="Psicose">
+                    <h2>Psicose (1960)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="massacre.html">
+                    <img src="massacre da serra imagem.jpg" alt="O Massacre da Serra Elétrica">
+                    <h2>O Massacre da Serra Elétrica (1974)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="halloween.html">
+                    <img src="halloween iamgem.jpg" alt="Halloween">
+                    <h2>Halloween (1978)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="mortos-vivos.html">
+                    <img src="a noite dos mortos imagem.jpg" alt="A Noite dos Mortos-Vivos">
+                    <h2>A Noite dos Mortos-Vivos (1968)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="chamado.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/The_Ring_%282002%29.jpg" alt="O Chamado">
+                    <h2>O Chamado (1998)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="hereditario.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Hereditary_poster.jpg" alt="Hereditário">
+                    <h2>Hereditário (2018)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="invocacao.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a2/The_Conjuring_2_poster.jpg" alt="Invocação do Mal">
+                    <h2>Invocação do Mal (2013)</h2>
+                </a>
+            </article>
+            <article>
+                <a href="bruxa.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/The_Witch_2015_film_poster.jpg" alt="A Bruxa">
+                    <h2>A Bruxa (2015)</h2>
+                </a>
+            </article>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Filme
