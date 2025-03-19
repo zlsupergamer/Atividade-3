@@ -26,9 +26,9 @@
 
             if (username === "ZL" && password === "ZL") {
                 alert("Login bem-sucedido!");
-                document.getElementById("loginForm").style.display = "none"; // Esconde o formulário de login
-                document.getElementById("header").style.display = "block"; // Exibe o cabeçalho
-                document.getElementById("filmes").style.display = "block"; // Exibe a seção de filmes
+                document.getElementById("loginForm").style.display = "none"; 
+                document.getElementById("header").style.display = "block"; 
+                document.getElementById("filmes").style.display = "block"; 
             } else {
                 alert("Credenciais inválidas!");
             }
@@ -64,8 +64,6 @@
         #loginForm button:hover {
             background-color: #0056b3;
         }
-
-        /* Estilos para o cabeçalho e filmes */
         #header {
             display: none;
             text-align: center;
@@ -100,7 +98,6 @@
         <input type="text" id="searchBar" placeholder="Pesquisar..." onkeyup="buscarFilme()">
     </header>
 
-    <!-- Formulário de login no canto superior direito -->
     <section id="loginForm">
         <h2>Login</h2>
         <form onsubmit="event.preventDefault(); login();">
@@ -110,7 +107,6 @@
         </form>
     </section>
 
-    <!-- Filmes de Terror - Exibidos após o login -->
     <section id="filmes" style="display:none;">
         <section class="filmes">
             <article>
